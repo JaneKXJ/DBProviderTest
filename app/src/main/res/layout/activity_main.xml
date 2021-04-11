@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/oper_btn_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/add_data_btn"
+            android:layout_marginTop="100px"
+            android:layout_marginLeft="50px"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:text="添加数据"/>
+
+        <Button
+            android:id="@+id/update_data_btn"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_below="@id/add_data_btn"
+            android:layout_marginLeft="50px"
+            android:text="更新数据"/>
+
+        <Button
+            android:id="@+id/delete_data_btn"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_below="@id/search_all_btn"
+            android:layout_marginLeft="50px"
+            android:text="删除数据"/>
+
+        <Button
+            android:id="@+id/delete_all_data_btn"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_below="@id/search_all_btn"
+            android:layout_marginLeft="50px"
+            android:text="删除所有数据"/>
+
+        <Button
+            android:id="@+id/search_data_btn"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_below="@id/update_data_btn"
+            android:layout_marginLeft="50px"
+            android:text="查找数据"/>
+
+        <Button
+            android:id="@+id/search_all_btn"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_below="@id/search_data_btn"
+            android:layout_marginLeft="50px"
+            android:text="查找所有数据"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_info_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="200px"
+        android:layout_toRightOf="@id/oper_btn_ll"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/name_et"
+            android:layout_width="250px"
+            android:layout_height="wrap_content"
+            android:hint="userName"/>
+        <EditText
+            android:id="@+id/age_et"
+            android:layout_width="250px"
+            android:layout_height="wrap_content"
+            android:hint="userAge"/>
+        <EditText
+            android:id="@+id/job_et"
+            android:layout_width="250px"
+            android:layout_height="wrap_content"
+            android:hint="userJob"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="100px"
+        android:layout_toRightOf="@id/oper_btn_ll"
+        android:layout_below="@id/user_info_ll"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <EditText
+            android:id="@+id/job_name_et"
+            android:layout_width="250px"
+            android:layout_height="wrap_content"
+            android:hint="jobName"/>
+        <EditText
+            android:id="@+id/job_des_et"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:hint="jobDes"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/data_display_rv"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="100px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_below="@id/oper_btn_ll"/>
+
+</RelativeLayout>
